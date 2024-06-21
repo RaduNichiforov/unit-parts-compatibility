@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Parts Compatibility</title>
+    <link rel="stylesheet" href="SharkNinja.css">
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <div>
+        <input type="text" id="searchBar" placeholder="Enter model number">
+        <select id="partTypeDropdown">
+            <option value="Motor">Motor</option>
+            <option value="Dust Cup">Dust Cup</option>
+            <option value="Handle & Hose">Handle & Hose</option>
+            <option value="Wand">Wand</option>
+            <option value="Floor Nozzle">Floor Nozzle</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+        <button onclick="filterUnits()">Search</button>
+    </div>
+    <div id="results"></div>
+    <script src="SharkNinja.js"></script>
+</body>
+</html>
