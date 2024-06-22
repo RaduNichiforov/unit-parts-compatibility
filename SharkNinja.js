@@ -1,4 +1,3 @@
-// Example data structure
 const unitPartsData = {
     "ax950ukt": [
         { "part": "Motor", "code": "1234", "category": "motor" },
@@ -48,7 +47,6 @@ function filterUnits() {
                 const partList = document.createElement('ul');
                 partsGroupedByCategory[category].forEach(part => {
                     const partItem = document.createElement('li');
-                    partItem.className = 'result-item';
                     partItem.textContent = `${part.part} (Code: ${part.code})`;
                     partList.appendChild(partItem);
                 });
