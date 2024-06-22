@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="SharkNinja.css">
 </head>
 <body>
-    <div class="container">
-        <input type="text" id="searchBar" placeholder="Enter model number">
-        <select id="partTypeDropdown">
-            <option value="dust cup">Dust Cup</option>
-            <option value="handle & hose">Handle & Hose</option>
-            <option value="wand">Wand</option>
-            <option value="floor nozzle">Floor Nozzle</option>
-            <option value="accessories">Accessories</option>
-        </select>
-        <button onclick="filterUnits()">Search</button>
-        <div id="results"></div>
+    <h1>Unit Parts Compatibility Checker</h1>
+    <input type="text" id="searchBar" placeholder="Enter model number...">
+    <select id="partTypeDropdown">
+        <option value="motor">Motor</option>
+        <option value="dust cup">Dust Cup</option>
+        <option value="handle & hose">Handle & Hose</option>
+        <option value="floor nozzle">Floor Nozzle</option>
+        <option value="accessories">Accessories</option>
+    </select>
+    <button onclick="filterUnits()">Search</button>
+    <div id="results"></div>
+    
+    <div class="footer">
+        Made by Nicky with love <span class="heart">❤️</span>
     </div>
-    <footer>
-        Made by Nicky with love <span class="heart">💙</span>
-    </footer>
+
     <script src="SharkNinja.js"></script>
 </body>
 </html>

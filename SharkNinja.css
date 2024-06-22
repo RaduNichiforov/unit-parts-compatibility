@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-select, button, input {
+select, button {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -48,6 +48,6 @@ footer {
 }
 
 .heart {
-    color: #89CFF0; /* Baby blue color */
+    color: #89CFF0;
     font-size: 2em;
 }
