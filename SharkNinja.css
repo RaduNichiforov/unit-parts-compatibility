@@ -37,6 +37,24 @@ button:hover {
     background-color: #0056b3;
 }
 
+#results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-item {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.result-item:hover {
+    transform: scale(1.02);
+}
+
 footer {
     position: fixed;
     bottom: 10px;
