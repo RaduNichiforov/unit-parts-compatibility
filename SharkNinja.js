@@ -1,8 +1,11 @@
 // Example data structure
 const unitPartsData = {
-    "exampleModel": [
+    "ax950ukt": [
         { "part": "Motor", "code": "1234", "category": "motor" },
-        { "part": "Dust Cup", "code": "5678", "category": "dust cup" }
+        { "part": "Dust Cup", "code": "5678", "category": "dust cup" },
+        { "part": "Handle & Hose", "code": "9101", "category": "handle & hose" },
+        { "part": "Wand", "code": "1121", "category": "wand" },
+        { "part": "Floor Nozzle", "code": "3141", "category": "floor nozzle" }
     ]
     // Add more models and parts here
 };
