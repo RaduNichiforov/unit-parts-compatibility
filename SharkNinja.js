@@ -1,20 +1,12 @@
-const unitPartsData = {
-    "ax950ukt": [
-        { "part": "Motor", "code": "1234", "category": "motor" },
-        { "part": "Dust Cup", "code": "5678", "category": "dust cup" },
-        { "part": "Handle & Hose", "code": "9101", "category": "handle & hose" },
-        { "part": "Wand", "code": "1121", "category": "wand" },
-        { "part": "Floor Nozzle", "code": "3141", "category": "floor nozzle" }
-    ]
-    // Add more models and parts here
-};
+const unitPartsData = {}; // Assuming this data is being loaded somewhere in your application
 
 function filterUnits() {
     const searchBar = document.getElementById('searchBar');
     const partTypeDropdown = document.getElementById('partTypeDropdown');
     const results = document.getElementById('results');
-    const searchTerm = searchBar.value.toLowerCase().trim(); // Normalize search term
-    const selectedPartType = partTypeDropdown.value.toLowerCase(); // Normalize part type
+
+    const searchTerm = searchBar.value.toLowerCase().trim();
+    const selectedPartType = partTypeDropdown.value.toLowerCase().trim();
 
     console.log('Searching for model:', searchTerm, 'with part type:', selectedPartType);
 
@@ -28,7 +20,8 @@ function filterUnits() {
                 return !partCategory.includes('motor') &&
                        !partCategory.includes('dust cup') &&
                        !partCategory.includes('handle & hose') &&
-                       !partCategory.includes('wand');
+                       !partCategory.includes('wand') &&
+                       !partCategory.includes('floor nozzle');
             } else {
                 return partCategory.includes(selectedPartType);
             }
@@ -44,29 +37,27 @@ function filterUnits() {
                 groupTitle.textContent = category;
                 groupDiv.appendChild(groupTitle);
 
-                const partList = document.createElement('ul');
+                const list = document.createElement('ul');
                 partsGroupedByCategory[category].forEach(part => {
-                    const partItem = document.createElement('li');
-                    partItem.textContent = `${part.part} (Code: ${part.code})`;
-                    partList.appendChild(partItem);
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${part.code}: ${part.category}`;
+                    list.appendChild(listItem);
                 });
 
-                groupDiv.appendChild(partList);
+                groupDiv.appendChild(list);
                 results.appendChild(groupDiv);
             }
         } else {
-            results.textContent = 'No parts found for the selected category.';
+            results.textContent = 'No parts found for this model and part type.';
         }
     } else {
-        results.textContent = 'Model not found.';
+        results.textContent = 'Model not found';
     }
 }
 
 function groupBy(array, key) {
     return array.reduce((result, currentValue) => {
-        (result[currentValue[key]] = result[currentValue[key]] || []).push(
-            currentValue
-        );
+        (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
         return result;
     }, {});
 }
