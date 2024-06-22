@@ -1,33 +1,40 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
 }
 
-#loading {
-    display: none;
-    text-align: center;
-    margin: 20px;
-    font-size: 20px;
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-input[type="text"], select {
+#searchBar {
     padding: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+#partTypeDropdown {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 320px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1em;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -36,31 +43,33 @@ button:hover {
 }
 
 #results {
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px 0;
 }
 
 .group {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 20px;
     margin-bottom: 20px;
 }
 
 .group h2 {
-    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-.group ul {
-    list-style-type: none;
-    padding-left: 0;
+.part {
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
 
-.group ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5em; /* 1.5X bigger */
+    font-weight: bold; /* Bolded */
 }
 
-.group ul li:last-child {
-    border-bottom: none;
+.footer .heart {
+    font-size: 2em; /* Twice bigger */
+    color: #0000ff; /* Baby blue color */
 }
