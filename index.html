@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit Parts Compatibility</title>
     <link rel="stylesheet" href="SharkNinja.css">
+    <title>Unit Parts Compatibility</title>
 </head>
 <body>
-    <div id="loading">Loading...</div>
-    <div>
-        <input type="text" id="searchBar" placeholder="Enter model number">
+    <div class="container">
+        <input type="text" id="searchBar" placeholder="Enter model">
         <select id="partTypeDropdown">
-            <option value="Motor">Motor</option>
-            <option value="Dust Cup">Dust Cup</option>
-            <option value="Handle & Hose">Handle & Hose</option>
-            <option value="Wand">Wand</option>
-            <option value="Floor Nozzle">Floor Nozzle</option>
-            <option value="Accessories">Accessories</option>
+            <option value="motor">Motor</option>
+            <option value="dust cup">Dust Cup</option>
+            <option value="handle & hose">Handle & Hose</option>
+            <option value="wand">Wand</option>
+            <option value="floor nozzle">Floor Nozzle</option>
+            <option value="accessories">Accessories</option>
         </select>
         <button onclick="filterUnits()">Search</button>
+        <div id="results"></div>
     </div>
-    <div id="results"></div>
+    <footer>
+        Made by Nicky with love <span class="heart">♥</span>
+    </footer>
     <script src="SharkNinja.js"></script>
 </body>
 </html>
-"<!-- Triggering new deployment -->" 
