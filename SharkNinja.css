@@ -1,38 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
+    margin: 0;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#searchBar {
+input, select, button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
     padding: 10px;
-    font-size: 1em;
-    margin-bottom: 10px;
-    width: 300px;
-}
-
-#partTypeDropdown {
-    padding: 10px;
-    font-size: 1em;
-    margin-bottom: 20px;
-    width: 320px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
+    background-color: #007BFF;
     color: white;
     border: none;
     cursor: pointer;
@@ -42,34 +37,15 @@ button:hover {
     background-color: #0056b3;
 }
 
-#results {
-    width: 80%;
-    margin: 20px 0;
-}
-
-.group {
-    margin-bottom: 20px;
-}
-
-.group h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.part {
-    margin-left: 20px;
-    margin-bottom: 5px;
-}
-
-.footer {
+footer {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    font-size: 1.5em; /* 1.5X bigger */
-    font-weight: bold; /* Bolded */
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.footer .heart {
-    font-size: 2em; /* Twice bigger */
-    color: #0000ff; /* Baby blue color */
+footer .heart {
+    color: #ADD8E6;
+    font-size: 2em;
 }
