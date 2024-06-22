@@ -1,3 +1,12 @@
+// Example data structure
+const unitPartsData = {
+    "exampleModel": [
+        { "part": "Motor", "code": "1234", "category": "motor" },
+        { "part": "Dust Cup", "code": "5678", "category": "dust cup" }
+    ]
+    // Add more models and parts here
+};
+
 function filterUnits() {
     const searchBar = document.getElementById('searchBar');
     const partTypeDropdown = document.getElementById('partTypeDropdown');
